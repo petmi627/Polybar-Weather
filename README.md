@@ -26,11 +26,12 @@ fc-list | grep weather
 Polybar configuration
 
 ```
-fonts-n = Weather Icons:pixelsize=14;3
+fonts-6 = Weather Icons:pixelsize=14;3
 ---
 [module/weather]
 type = custom/script
-label = %output%
+label-font = Weather Icons:pixelsize=14;3
+label = %{T7}%output%%{T-}
 exec = python3 -u ~/.config/polybar/scripts/weather.py Diekirch,LU
 interval = 600
 click-left = firefox https://openweathermap.org/?q=Diekirch,LU
